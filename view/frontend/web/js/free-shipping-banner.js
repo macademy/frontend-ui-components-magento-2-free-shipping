@@ -8,7 +8,10 @@ define([
     return Component.extend({
         defaults: {
             subtotal: 33.00,
-            template: 'Macademy_FreeShippingPromo/free-shipping-banner'
+            template: 'Macademy_FreeShippingPromo/free-shipping-banner',
+            tracks: {
+                subtotal: true
+            }
         },
         initialize: function() {
             this._super();
