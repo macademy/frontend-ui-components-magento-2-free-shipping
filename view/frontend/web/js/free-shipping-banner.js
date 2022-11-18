@@ -11,9 +11,11 @@ define([
 
     return Component.extend({
         defaults: {
+            message: '${ $.messageDefault }',
             subtotal: 0.00,
             template: 'Macademy_FreeShippingPromo/free-shipping-banner',
             tracks: {
+                message: true,
                 subtotal: true
             }
         },

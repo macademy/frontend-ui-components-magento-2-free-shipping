@@ -2,18 +2,16 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header.container">
-            <block
-                name="free.shipping.banner"
-                template="Macademy_FreeShippingPromo::free-shipping-banner.phtml"
-                before="-"
-            >
+            <block name="free.shipping.banner" template="Macademy_FreeShippingPromo::free-shipping-banner.phtml" before="-">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
                             <item name="free-shipping-banner" xsi:type="array">
                                 <item name="component" xsi:type="string">Macademy_FreeShippingPromo/js/free-shipping-banner</item>
                                 <item name="config" xsi:type="array">
-                                    <item name="message" xsi:type="string">Free Shipping Message</item>
+                                    <item name="messageDefault" xsi:type="string">FREE shipping on orders over $100! 😁</item>
+                                    <item name="messageItemsInCart" xsi:type="string">You're $XX.XX away from FREE shipping! 😎</item>
+                                    <item name="messageFreeShipping" xsi:type="string">Your order now has FREE shipping! 🎉</item>
                                 </item>
                             </item>
                         </item>
