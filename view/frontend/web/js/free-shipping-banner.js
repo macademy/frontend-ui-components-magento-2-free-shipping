@@ -6,10 +6,13 @@ define([
     'use strict';
 
     return Component.extend({
+        defaults: {
+            message: 'Free Shipping Message' + '!'
+        },
         initialize: function() {
             this._super();
 
-            console.log('Free Shipping Banner UI Component has been loaded');
+            console.log(this.message);
         }
     });
 });
