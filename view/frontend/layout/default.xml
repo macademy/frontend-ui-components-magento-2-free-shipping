@@ -9,13 +9,14 @@
                             <item name="free-shipping-banner" xsi:type="array">
                                 <item name="component" xsi:type="string">Macademy_FreeShippingPromo/js/free-shipping-banner</item>
                                 <item name="config" xsi:type="array">
-                                    <item name="messageDefault" xsi:type="string">FREE shipping on orders over $100! 😁</item>
+                                    <item name="messageDefault" xsi:type="string">FREE shipping on orders over ${{freeShippingThreshold}}! 😁</item>
                                     <item name="messageItemsInCart" xsi:type="string">You're $XX.XX away from FREE shipping! 😎</item>
                                     <item name="messageFreeShipping" xsi:type="string">Your order now has FREE shipping! 🎉</item>
                                 </item>
                             </item>
                         </item>
                     </argument>
+                    <argument name="shipping_config_view_model" xsi:type="object">Macademy\FreeShippingPromo\ViewModel\ShippingConfig</argument>
                 </arguments>
             </block>
         </referenceContainer>

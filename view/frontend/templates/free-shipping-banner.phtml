@@ -1,5 +1,9 @@
 <?php
 /* @var $block Magento\Framework\View\Element\Template */
+/* @var $shippingConfigViewModel Macademy\FreeShippingPromo\ViewModel\ShippingConfig */
+$shippingConfigViewModel = $block->getData('shipping_config_view_model');
+$jsLayout = json_decode($block->getJsLayout(), true);
+$jsLayout['components']['free-shipping-banner']['config']['freeShippingThreshold'] = $shippingConfigViewModel->getFreeShippingThreshold();
 ?>
 <div id="free-shipping-banner" data-bind="scope: 'free-shipping-banner'">
     <!-- ko template: getTemplate() --><!-- /ko -->
@@ -8,7 +12,7 @@
 <script type="text/x-magento-init">
     {
         "#free-shipping-banner": {
-            "Magento_Ui/js/core/app": <?= $block->getJsLayout() ?>
+            "Magento_Ui/js/core/app": <?= json_encode($jsLayout) ?>
         }
     }
 </script>
